@@ -146,7 +146,8 @@ OBJECT NOT DETECTED
 ![WhatsApp Image 2026-02-06 at 10 45 34 AM](https://github.com/user-attachments/assets/5ed38cc3-904f-4acd-b647-3897d3f69821)
 
 OBJECT DETECTED
-![WhatsApp Image 2026-02-06 at 10 45 34 AM](https://github.com/user-attachments/assets/6c2369d0-059e-4608-bf27-8b614c909337)
+![WhatsApp Image 2026-02-06 at 10 45 53 AM](https://github.com/user-attachments/assets/d4bf3597-278b-4998-919d-10070ca42b22)
+
 
 
 ## Result
