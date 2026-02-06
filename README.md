@@ -2,13 +2,13 @@
 
 
 **DATE:**
-
+06-02-2026
 **NAME:**
-
+VIVIN MATHEW.V
 **ROLL NO:**
-
+212224040367
 **DEPARTMENT:**
-
+CSE
 ## Aim
 
 To Interface a Digital Input (IR pair ) to ARM IOT development board and write a program to obtain the data
@@ -102,10 +102,52 @@ IR technology is used in a wide range of wireless applications which includes re
 ## STM 32 CUBE PROGRAM
 
 ```
-// Your STM 32 CUBE Program code here
+#include "main.h"
+#include "stdbool.h"
+bool IRSENSOR;
+void  IRPAIR();
+
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+int main(void)
+{
+ 
+  HAL_Init();                                   
+  SystemClock_Config();
+  MX_GPIO_Init();
+ 
+  while (1)
+  {
+    IRPAIR();
+  }
+ 
+}
+void IRPAIR()
+{
+	IRSENSOR=HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_4);
+		if(IRSENSOR==0)
+		{
+			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_SET);
+			HAL_Delay(1000);
+			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
+			HAL_Delay(1000);
+		}
+		else
+		{
+			HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
+			HAL_Delay(1000);
+		}
+}
+
 ```
 
 ## OUTPUT
+OBJECT NOT DETECTED
+![WhatsApp Image 2026-02-06 at 10 45 34 AM](https://github.com/user-attachments/assets/5ed38cc3-904f-4acd-b647-3897d3f69821)
+
+OBJECT DETECTED
+![WhatsApp Image 2026-02-06 at 10 45 34 AM](https://github.com/user-attachments/assets/6c2369d0-059e-4608-bf27-8b614c909337)
+
 
 ## Result
 
